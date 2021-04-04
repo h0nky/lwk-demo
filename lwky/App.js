@@ -4,18 +4,40 @@ import React from 'react';
 import OptionsScreen from './components/OptionsScreen';
 import ChatScreen from './components/ChatScreen';
 
-import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const Stack = createStackNavigator();
+import { STEEL_GRAY, WHITE } from './constants';
+
+const { Navigator, Screen } = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Options" component={OptionsScreen} />
-        <Stack.Screen name="Chat" component={ChatScreen} />
-      </Stack.Navigator>
+      <Navigator initialRouteName="OptionScreen">
+        <Screen
+          name="Options"
+          component={OptionsScreen}
+          options={{
+            title: 'New Poll',
+            headerStyle: {
+              backgroundColor: STEEL_GRAY,
+            },
+            headerTintColor: WHITE,
+          }}
+        />
+        <Screen
+          name="Chat"
+          component={ChatScreen}
+          options={{
+            title: 'Lowkey Squad',
+            headerStyle: {
+              backgroundColor: STEEL_GRAY,
+            },
+            headerTintColor: WHITE,
+          }}
+        />
+      </Navigator>
     </NavigationContainer>
   );
 };

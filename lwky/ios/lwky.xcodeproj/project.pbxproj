@@ -14,6 +14,9 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B11E4A3F4EDECD8DB5ED52B9 /* libPods-lwky.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D75A877DC3101E6E10501F8D /* libPods-lwky.a */; };
 		B12212D9ED011EAA118E913A /* libPods-lwky-lwkyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FFC987A748A39433E3CF221 /* libPods-lwky-lwkyTests.a */; };
+		74EDB0BB6AAD41DAABB98149 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 80251854264B4E9AA1B75B0E /* Poppins-Medium.ttf */; };
+		30D23F5C666048E89F0A18CF /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E30E726A76148CAB93A05FD /* Poppins-Regular.ttf */; };
+		F6B3DD59F74643B881E7916C /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 34BF73FB26A740A792B5721B /* Poppins-SemiBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		CCBA1F12C83CCA35AC355D43 /* Pods-lwky.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lwky.debug.xcconfig"; path = "Target Support Files/Pods-lwky/Pods-lwky.debug.xcconfig"; sourceTree = "<group>"; };
 		D75A877DC3101E6E10501F8D /* libPods-lwky.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lwky.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		80251854264B4E9AA1B75B0E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E30E726A76148CAB93A05FD /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		34BF73FB26A740A792B5721B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				AF5BD7490D0421EA9C20F4D1 /* Pods */,
+				61A852770A2C4E86ABC748F3 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,9 +152,19 @@
 				9BD1E605B0816568B39A0B7F /* Pods-lwky-lwkyTests.debug.xcconfig */,
 				A145D3B44C182718C07EF41F /* Pods-lwky-lwkyTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		61A852770A2C4E86ABC748F3 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				80251854264B4E9AA1B75B0E /* Poppins-Medium.ttf */,
+				3E30E726A76148CAB93A05FD /* Poppins-Regular.ttf */,
+				34BF73FB26A740A792B5721B /* Poppins-SemiBold.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +262,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				74EDB0BB6AAD41DAABB98149 /* Poppins-Medium.ttf in Resources */,
+				30D23F5C666048E89F0A18CF /* Poppins-Regular.ttf in Resources */,
+				F6B3DD59F74643B881E7916C /* Poppins-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J53G3W4DR2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = lwky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -511,6 +532,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J53G3W4DR2;
 				INFOPLIST_FILE = lwky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -1,20 +1,21 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-const ChatScreen = ({navigation}) => {
+import { CINDER, WHITE } from '../../constants';
+
+const ChatScreen = ({ navigation }) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Chat Screen</Text>
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: CINDER,
+    flex: 1,
+  },
+});
 
 export default ChatScreen;

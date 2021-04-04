@@ -1,1 +1,1 @@
-export {default} from './OptionsScreen';
+export { default } from './OptionsScreen';
