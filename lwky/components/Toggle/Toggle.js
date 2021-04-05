@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { View, Switch, StyleSheet } from 'react-native';
+import { View, Switch, StyleSheet, Text } from 'react-native';
 
-const Toggle = () => {
+import { WHITE, POPPINS_MEDIUM, BLUE_RIBBON } from '../../constants';
+
+const Toggle = ({ title }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled(previousState => !previousState);
   return (
     <View style={styles.container}>
+      <Text style={styles.text}>{title}</Text>
       <Switch
-        trackColor={{ false: '#767577', true: '#81b0ff' }}
-        thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
-        ios_backgroundColor="#3e3e3e"
+        trackColor={{ true: BLUE_RIBBON, false: BLUE_RIBBON }}
+        thumbColor={{ true: BLUE_RIBBON, false: BLUE_RIBBON }}
         onValueChange={toggleSwitch}
         value={isEnabled}
       />
@@ -19,9 +21,15 @@ const Toggle = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    justifyContent: 'center',
+    margin: 16,
+  },
+  text: {
+    color: WHITE,
+    fontFamily: POPPINS_MEDIUM,
+    fontSize: 14,
   },
 });
 

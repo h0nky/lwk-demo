@@ -3,6 +3,7 @@ import React from 'react';
 
 import OptionsScreen from './components/OptionsScreen';
 import ChatScreen from './components/ChatScreen';
+import Header from './components/Header';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -19,11 +20,7 @@ const App = () => {
           name="Options"
           component={OptionsScreen}
           options={{
-            title: 'New Poll',
-            headerStyle: {
-              backgroundColor: STEEL_GRAY,
-            },
-            headerTintColor: WHITE,
+            header: props => <Header {...props} />,
           }}
         />
         <Screen
