@@ -12,6 +12,8 @@ import {
 
 import Label from '../Label';
 
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 import {
   STEEL_GRAY,
   BLUE_RIBBON,
@@ -51,7 +53,9 @@ const OptionsList = () => {
             <View key={index} style={styles.item}>
               <Text style={styles.itemText}>{item.title}</Text>
               <TouchableOpacity onPress={() => onHandleRemove(item.key)}>
-                <View style={styles.deleteButton} />
+                <View style={styles.deleteButton}>
+                  <Icon name="times" size={14} color={WHITE} />
+                </View>
               </TouchableOpacity>
             </View>
           )}
@@ -63,6 +67,7 @@ const OptionsList = () => {
           onSubmitEditing={onSubmitOption}
           placeholder="Add an option"
           placeholderTextColor={BLUE_RIBBON}
+          maxLength={30}
         />
       </View>
     </SafeAreaView>
@@ -72,8 +77,7 @@ const OptionsList = () => {
 const styles = StyleSheet.create({
   item: {
     paddingLeft: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    marginBottom: 8,
     backgroundColor: STEEL_GRAY,
     borderRadius: 12,
     flexDirection: 'row',
@@ -90,14 +94,15 @@ const styles = StyleSheet.create({
   },
   deleteButton: {
     backgroundColor: YANKEES_BLUE,
-    height: 50,
+    height: 51,
     width: 50,
     borderTopRightRadius: 12,
     borderBottomRightRadius: 12,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   input: {
     height: 51,
-    margin: 15,
     color: WHITE,
     backgroundColor: STEEL_GRAY,
     paddingLeft: 20,
@@ -110,7 +115,10 @@ const styles = StyleSheet.create({
   labelContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
+    marginBottom: 10,
+  },
+  container: {
+    marginBottom: 40,
   },
 });
 

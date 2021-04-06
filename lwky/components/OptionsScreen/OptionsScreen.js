@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: CINDER,
     flex: 1,
-    paddingTop: 24,
+    paddingTop: 32,
+    paddingHorizontal: 20,
   },
   toggleContainer: {
     flex: 1,

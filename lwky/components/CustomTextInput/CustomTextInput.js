@@ -26,10 +26,10 @@ const CustomTextInput = () => {
 const styles = StyleSheet.create({
   containter: {
     justifyContent: 'flex-start',
+    marginBottom: 25,
   },
   input: {
     height: 51,
-    margin: 15,
     color: WHITE,
     backgroundColor: STEEL_GRAY,
     paddingLeft: 20,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   labelContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    paddingHorizontal: 16,
+    marginBottom: 10,
   },
 });
 

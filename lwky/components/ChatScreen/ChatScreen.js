@@ -1,20 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import ChatList from '../ChatList';
 
-import { CINDER, WHITE } from '../../constants';
+import { CINDER } from '../../constants';
 
-const ChatScreen = ({ navigation }) => {
-  return (
-    <View style={styles.container}>
-      <Text>Chat Screen</Text>
-    </View>
-  );
-};
+const ChatScreen = () => (
+  <View style={styles.container}>
+    <ChatList />
+  </View>
+);
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: CINDER,
     flex: 1,
+    backgroundColor: CINDER,
+    paddingHorizontal: 15,
   },
 });
 

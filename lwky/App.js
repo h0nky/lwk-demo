@@ -1,42 +1,47 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import OptionsHeader from './components/OptionsHeader';
 import OptionsScreen from './components/OptionsScreen';
+import ChatHeader from './components/ChatHeader';
 import ChatScreen from './components/ChatScreen';
-import Header from './components/Header';
+import TabBar from './components/TabBar';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { STEEL_GRAY, WHITE } from './constants';
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
-const { Navigator, Screen } = createStackNavigator();
+const ChatTabScreen = () => (
+  <Tab.Navigator tabBar={() => <TabBar />}>
+    <Tab.Screen name="ChatScreen" component={ChatScreen} />
+  </Tab.Navigator>
+);
 
-const App = () => {
-  return (
+const App = () => (
+  <SafeAreaProvider>
     <NavigationContainer>
-      <Navigator initialRouteName="OptionScreen">
-        <Screen
+      <Stack.Navigator>
+        <Stack.Screen
           name="Options"
           component={OptionsScreen}
           options={{
-            header: props => <Header {...props} />,
+            header: props => <OptionsHeader {...props} />,
           }}
         />
-        <Screen
+        <Stack.Screen
           name="Chat"
-          component={ChatScreen}
+          component={ChatTabScreen}
           options={{
-            title: 'Lowkey Squad',
-            headerStyle: {
-              backgroundColor: STEEL_GRAY,
-            },
-            headerTintColor: WHITE,
+            header: props => <ChatHeader {...props} />,
           }}
         />
-      </Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  </SafeAreaProvider>
+);
 
 export default App;
