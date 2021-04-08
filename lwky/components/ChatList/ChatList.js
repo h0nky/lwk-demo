@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 import { SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native';
 import { Avatar } from 'react-native-elements';
-import PollCard from '../PollCard';
 import {
   WHITE,
   POPPINS_REGULAR,
   WATERLOO,
   POPPINS_BOLD,
 } from '../../constants';
-
 import { mockData } from './mockData';
 
 const ChatListItem = ({ index, item }) => (
@@ -28,10 +26,9 @@ const ChatList = () => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={state}
-        keyExtractor={item => item.key}
+        keyExtractor={item => item.id}
         renderItem={props => <ChatListItem {...props} />}
       />
-      <PollCard />
     </SafeAreaView>
   );
 };
@@ -40,7 +37,6 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: 'space-between',
     flex: 1,
-    paddingHorizontal: 12,
   },
   listItem: {
     flexDirection: 'row',

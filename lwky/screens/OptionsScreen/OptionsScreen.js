@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
-import CustomTextInput from '../CustomTextInput';
-import OptionsList from '../OptionsList';
-import Toggle from '../Toggle';
+import CustomTextInput from '../../components/CustomTextInput';
+import OptionsList from '../../components/OptionsList';
+import Toggle from '../../components/Toggle';
 import { CINDER } from '../../constants';
 
 const OptionsScreen = () => (

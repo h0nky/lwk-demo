@@ -3,9 +3,11 @@ import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import OptionsHeader from './components/OptionsHeader';
-import OptionsScreen from './components/OptionsScreen';
+import OptionsScreen from './screens/OptionsScreen';
+
 import ChatHeader from './components/ChatHeader';
-import ChatScreen from './components/ChatScreen';
+import ChatScreen from './screens/ChatScreen';
+
 import TabBar from './components/TabBar';
 
 import { NavigationContainer } from '@react-navigation/native';

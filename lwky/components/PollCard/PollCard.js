@@ -6,39 +6,19 @@ import {
   WHITE,
   POPPINS_BOLD,
   POPPINS_MEDIUM,
-  STEEL_GRAY,
+  CARD_GRADIENT,
+  CARD_ITEM_GRADIENT,
 } from '../../constants';
 import LinearGradient from 'react-native-linear-gradient';
-
-const mock = [
-  {
-    id: 1,
-    name: 'Los Angeles Lakers',
-  },
-  {
-    id: 2,
-    name: 'Golden State Warriors',
-  },
-  {
-    id: 3,
-    name: 'Chicago Bulls',
-  },
-  {
-    id: 4,
-    name: 'Boston Celtics',
-  },
-];
+import { mockData } from './mockData';
 
 const PollListItem = ({ id, name }) => (
-  <LinearGradient
-    key={id}
-    style={styles.item}
-    colors={['#382461', '#2A2156', '#1F1F4D']}>
+  <LinearGradient key={id} style={styles.item} colors={CARD_ITEM_GRADIENT}>
     <Text style={styles.itemText}>{name}</Text>
   </LinearGradient>
 );
 
-const CardHeader = () => (
+const PollCardHeader = () => (
   <View style={styles.headerContainer}>
     <Avatar size="medium" icon={{ name: 'user', type: 'font-awesome' }} />
     <View>
@@ -50,22 +30,17 @@ const CardHeader = () => (
 
 const PollCard = () => (
   <LinearGradient
-    colors={[
-      'rgba(168, 61, 127, 1)',
-      'rgba(111, 29, 122, 0.51)',
-      'rgba(76, 9, 119, 0.2)',
-      'rgba(3, 17, 67, 0.6)',
-    ]}
-    start={{ x: 0.0, y: 0.5 }}
-    end={{ x: 0.3, y: 0.5 }}
+    colors={CARD_GRADIENT}
+    start={{ x: -0.1, y: -0.1 }}
+    end={{ x: 1, y: 1 }}
     locations={[0, 0.3, 0.8, 0.9]}
     style={styles.linearGradient}>
-    <CardHeader />
+    <PollCardHeader />
     <Text style={styles.cardTitle}>
       What is the greatest NBA team in the history?
     </Text>
     <FlatList
-      data={mock}
+      data={mockData}
       keyExtractor={item => item.id}
       renderItem={({ item }) => <PollListItem {...item} />}
     />

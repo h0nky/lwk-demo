@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-
 import {
-  SafeAreaView,
   View,
   FlatList,
   StyleSheet,
@@ -9,9 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-
 import Label from '../Label';
-
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 import {
@@ -40,7 +36,7 @@ const OptionsList = () => {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <View style={styles.labelContainer}>
         <Label text="Options" />
         <Label text={`${state.length}/8`} />
@@ -70,7 +66,7 @@ const OptionsList = () => {
           maxLength={30}
         />
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 
