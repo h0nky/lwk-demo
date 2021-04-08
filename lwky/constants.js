@@ -1,3 +1,4 @@
+// Colors
 export const CINDER = '#14131B';
 export const WHITE = '#FFFFFF';
 export const BLUE_RIBBON = '#2467F4';
@@ -7,6 +8,7 @@ export const YANKEES_BLUE = '#1D233F';
 export const CHARADE = '#2E2C3C';
 export const BLACK = '#000000';
 
+// Fonts
 export const POPPINS_REGULAR = 'Poppins-Regular';
 export const POPPINS_MEDIUM = 'Poppins-Medium';
 export const POPPINS_BOLD = 'Poppins-SemiBold';
