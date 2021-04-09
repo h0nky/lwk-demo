@@ -8,6 +8,7 @@ import {
   POPPINS_MEDIUM,
   CARD_GRADIENT,
   CARD_ITEM_GRADIENT,
+  VIOLENT_EGGPLANT,
 } from '../../constants';
 import LinearGradient from 'react-native-linear-gradient';
 import { mockData } from './mockData';
@@ -18,13 +19,23 @@ const PollListItem = ({ id, name }) => (
   </LinearGradient>
 );
 
+const VotesLabel = () => (
+  <View style={styles.labelContainer}>
+    <Text style={styles.labelNumber}>0</Text>
+    <Text style={styles.labelText}>votes</Text>
+  </View>
+);
+
 const PollCardHeader = () => (
-  <View style={styles.headerContainer}>
-    <Avatar size="medium" icon={{ name: 'user', type: 'font-awesome' }} />
-    <View>
-      <Text style={styles.title}>Public Poll</Text>
-      <Text style={styles.name}>Kelly Hodges</Text>
+  <View style={styles.cardHeaderContainer}>
+    <View style={styles.userInfo}>
+      <Avatar size="medium" icon={{ name: 'user', type: 'font-awesome' }} />
+      <View>
+        <Text style={styles.title}>Public Poll</Text>
+        <Text style={styles.name}>Kelly Hodges</Text>
+      </View>
     </View>
+    <VotesLabel />
   </View>
 );
 
@@ -34,7 +45,7 @@ const PollCard = () => (
     start={{ x: -0.1, y: -0.1 }}
     end={{ x: 1, y: 1 }}
     locations={[0, 0.3, 0.8, 0.9]}
-    style={styles.linearGradient}>
+    style={styles.container}>
     <PollCardHeader />
     <Text style={styles.cardTitle}>
       What is the greatest NBA team in the history?
@@ -48,16 +59,19 @@ const PollCard = () => (
 );
 
 const styles = StyleSheet.create({
-  linearGradient: {
+  container: {
     borderRadius: 18,
     height: 333,
     paddingTop: 12,
-    paddingBottom: 20,
-    paddingLeft: 20,
-    paddingRight: 12,
+    paddingHorizontal: 20,
     marginBottom: 15,
   },
-  headerContainer: {
+  cardHeaderContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  userInfo: {
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -91,6 +105,23 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     height: 40,
     borderRadius: 15,
+  },
+  labelContainer: {
+    backgroundColor: VIOLENT_EGGPLANT,
+    width: 52,
+    height: 52,
+    borderRadius: 52 / 2,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  labelText: {
+    color: WHITE,
+    fontSize: 11,
+  },
+  labelNumber: {
+    color: WHITE,
+    fontSize: 16,
+    fontFamily: POPPINS_BOLD,
   },
 });
 

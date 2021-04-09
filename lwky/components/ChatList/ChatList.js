@@ -41,7 +41,6 @@ const styles = StyleSheet.create({
   listItem: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 12,
   },
   userName: {
     color: WATERLOO,

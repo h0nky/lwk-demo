@@ -7,6 +7,7 @@ export const STEEL_GRAY = '#1C1A2A';
 export const YANKEES_BLUE = '#1D233F';
 export const CHARADE = '#2E2C3C';
 export const BLACK = '#000000';
+export const VIOLENT_EGGPLANT = '#AC1493';
 
 export const CARD_GRADIENT = [
   'rgba(168, 61, 127, 1)',
@@ -15,7 +16,7 @@ export const CARD_GRADIENT = [
   'rgba(3, 17, 67, 0.6)',
 ];
 
-export const CARD_ITEM_GRADIENT = ['#382461', '#2A2156', '#1F1F4D'];
+export const CARD_ITEM_GRADIENT = ['#33225E', '#2A2156', '#1F1F4C'];
 
 // Fonts
 export const POPPINS_REGULAR = 'Poppins-Regular';
